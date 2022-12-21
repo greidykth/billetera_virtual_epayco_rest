@@ -30,3 +30,8 @@ $router->group(['prefix' => 'v1/transactions'], function () use ($router) {
     $router->post('/payPurchase', 'TransactionController@payPurchase');
     $router->post('/payConfirmation', 'TransactionController@payConfirmation');
 });
+
+/** 
+ * Reset route
+ */
+    $router->get('/reset', 'ResetController@reset');
