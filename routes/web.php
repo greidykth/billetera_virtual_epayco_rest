@@ -24,7 +24,7 @@ $router->group(['prefix' => 'v1/clients'], function () use ($router) {
 /** 
  * Transactions routes
  */
-$router->group(['prefix' => 'v1/transaction'], function () use ($router) {
+$router->group(['prefix' => 'v1/transactions'], function () use ($router) {
     $router->post('/depositWallet', 'TransactionController@depositWallet');
     $router->post('/checkBalance', 'TransactionController@checkBalance');
     $router->post('/payPurchase', 'TransactionController@payPurchase');
