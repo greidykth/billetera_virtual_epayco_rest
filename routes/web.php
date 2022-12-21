@@ -13,6 +13,20 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+/** 
+ * Clients routes
+ */
+$router->group(['prefix' => 'v1/clients'], function () use ($router) {
+    $router->post('/login', 'ClientController@login');
+    $router->post('/registerClient', 'ClientController@registerClient');
+});
+
+/** 
+ * Transactions routes
+ */
+$router->group(['prefix' => 'v1/transaction'], function () use ($router) {
+    $router->post('/depositWallet', 'TransactionController@depositWallet');
+    $router->post('/checkBalance', 'TransactionController@checkBalance');
+    $router->post('/payPurchase', 'TransactionController@payPurchase');
+    $router->post('/payConfirmation', 'TransactionController@payConfirmation');
 });
