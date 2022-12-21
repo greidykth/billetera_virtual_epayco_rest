@@ -15,7 +15,7 @@ class ResetController extends Controller
      */
     public function __construct()
     {
-        $wsdl = 'http://billetera-virtual-soap.test/zoap/reset/server?wsdl';
+        $wsdl = env('URL_SOAP_SERVICE').'/zoap/reset/server?wsdl';
         $this->service = $this->createSoapClientInstance($wsdl);
     }
 

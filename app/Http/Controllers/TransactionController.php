@@ -16,7 +16,7 @@ class TransactionController extends Controller
      */
     public function __construct()
     {
-        $wsdl = 'http://billetera-virtual-soap.test/zoap/transaction/server?wsdl';
+        $wsdl = env('URL_SOAP_SERVICE'). '/zoap/transaction/server?wsdl';
         $this->service = $this->createSoapClientInstance($wsdl);
     }
 
