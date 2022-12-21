@@ -31,7 +31,7 @@ class ClientTest extends TestCase
             'cellphone' => "47092339",
         ]);
 
-        $response->seeJsonContains(["name" => "Jose Lopez", "cod_error" => "0"])
+        $response->seeJsonContains(["name" => "Jose Lopez", "cod_error" => "00"])
             ->seeJsonStructure([
                 "success",
                 "cod_error",
@@ -62,7 +62,7 @@ class ClientTest extends TestCase
             'cellphone' => "47092339",
         ]);
 
-        $response->seeJsonContains(["name" => "Jose Lopez", "cod_error" => "0"])
+        $response->seeJsonContains(["name" => "Jose Lopez", "cod_error" => "00"])
             ->seeJsonStructure([
                 "success",
                 "cod_error",
